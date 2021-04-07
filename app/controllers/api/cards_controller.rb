@@ -1,11 +1,16 @@
 class Api::CardsController < ApplicationController
+    before_action :set_card, only: [ :show ]
     def new 
         @card = Card.new
-        render json: @card
     end
 
     def create 
-        @card = Card.new(card_params)
+        @card = Card.new
+        if @card.create(card_params)
+            render json: @card
+        else
+            render :new
+        end
     end
 
     def show 
@@ -16,5 +21,9 @@ class Api::CardsController < ApplicationController
     private 
     def card_params 
         params.require(:card).permit(:suit, :value, :card_number)
+    end
+
+    def set_card 
+        @card = Card.find(params[:id])
     end
 end
