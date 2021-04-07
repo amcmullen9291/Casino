@@ -12,5 +12,10 @@ class Api::DealersController < ApplicationController
     @dealer = Dealer.find(params[:id])
     render json: @dealer
   end
-  
+
+  def index 
+    @dealer = Dealer.all
+    render json: @dealer
+  end 
+
 end

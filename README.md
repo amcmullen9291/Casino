@@ -1,24 +1,10 @@
-# README
+Fashioned after the classic "Higher-Lower" card game. 
+Rules: 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+User starts with a 300.00 balanace.
+Bids are adjusted by increments of $5.00;
+A bid of "0.00" is not allowed; 
+The deck is automatically reset; 
+User balances are saved;
+If a player reaches a balance of $0.00 the game is reset.
+The Background can be muted by clicking on the Rolltide Logo
