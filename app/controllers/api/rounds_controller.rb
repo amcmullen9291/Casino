@@ -18,4 +18,9 @@ class Api::RoundsController < ApplicationController
     def update 
     end 
 
+    private 
+    def round_params 
+        params.require(:round).permit(:availableCards, :previousCard_value, :currentCard_value, usedCards, :guest_bet)
+    end
+
 end
