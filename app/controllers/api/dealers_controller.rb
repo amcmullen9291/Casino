@@ -1,4 +1,4 @@
-class DealersController < ApplicationController
+class Api::DealersController < ApplicationController
   def new
     @dealer = Dealer.new
   end
@@ -10,6 +10,7 @@ class DealersController < ApplicationController
 
   def show 
     @dealer = Dealer.find(params[:id])
+    render json: @dealer
   end
   
 end
