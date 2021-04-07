@@ -7,5 +7,9 @@ class DealersController < ApplicationController
     @dealer = Dealer.create(params)
     render json: @dealer
   end
+
+  def show 
+    @dealer = Dealer.find(params[:id])
+  end
   
 end
