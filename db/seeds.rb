@@ -7,19 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Card.create!(:card_number => "1", :suit => "spades" , :value => "1")
-Card.create!(:card_number => "2", :suit => "spades" , :value => "2")
-Card.create!(:card_number => "3", :suit => "spades" , :value => "3")
-Card.create!(:card_number => "4", :suit => "spades" , :value => "4")
-Card.create!(:card_number => "5", :suit => "spades" , :value => "5")
-Card.create!(:card_number => "6", :suit => "spades" , :value => "6")
-Card.create!(:card_number => "7", :suit => "spades" , :value => "7")
-Card.create!(:card_number => "8", :suit => "spades" , :value => "8")
-Card.create!(:card_number => "9", :suit => "spades" , :value => "9")
-Card.create!(:card_number => "10", :suit => "spades" , :value => "10")
-Card.create!(:card_number => "11", :suit => "spades" , :value => "10")
-Card.create!(:card_number => "12", :suit => "spades" , :value => "10")
-Card.create!(:card_number => "13", :suit => "spades" , :value => "10")
+Card.create!(:card_number => "1", :suit => "spades" , :value => "1");
+Card.create!(:card_number => "2", :suit => "spades" , :value => "2");
+Card.create!(:card_number => "3", :suit => "spades" , :value => "3");
+Card.create!(:card_number => "4", :suit => "spades" , :value => "4");
+Card.create!(:card_number => "5", :suit => "spades" , :value => "5");
+Card.create!(:card_number => "6", :suit => "spades" , :value => "6");
+Card.create!(:card_number => "7", :suit => "spades" , :value => "7");
+Card.create!(:card_number => "8", :suit => "spades" , :value => "8");
+Card.create!(:card_number => "9", :suit => "spades" , :value => "9");
+Card.create!(:card_number => "10", :suit => "spades" , :value => "10");
+Card.create!(:card_number => "11", :suit => "spades" , :value => "10");
+Card.create!(:card_number => "12", :suit => "spades" , :value => "10");
+Card.create!(:card_number => "13", :suit => "spades" , :value => "10");
 
 Card.create!(:card_number => "27", :suit => "hearts", :value => "1");
 Card.create!(:card_number => "28", :suit => "hearts", :value => "2");
@@ -63,6 +63,4 @@ Card.create!(:card_number => "50", :suit => "diamonds", :value => "10");
 Card.create!(:card_number => "51", :suit => "diamonds", :value => "10");
 Card.create!(:card_number => "52", :suit => "diamonds", :value => "10");
 
-
-
-
+Guest.create!

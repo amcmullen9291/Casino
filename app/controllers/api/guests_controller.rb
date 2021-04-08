@@ -1,6 +1,12 @@
 class Api::GuestsController < ApplicationController
     before_action :set_guest, only: [:show, :edit, :update ]
 
+    def index 
+        guests = Guest.all 
+        render json: GuestSerializer.new(guests) 
+        
+    end 
+
     def new 
         @guest = Guest.new
         render json: @guest

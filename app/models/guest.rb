@@ -1,6 +1,7 @@
 class Guest < ApplicationRecord
-    has_many :rounds, array: true, default []
+    has_many :rounds
+    serialize :rounds, Array
     validates_presence_of :name
-    validates_presence_of :balance, :numericality => { :greater_than_or_equal_to => 0 }, default: 300.00
+    validates_presence_of :balance, default: 300.00
     validates_presence_of :total_played, numericality: true, default: 0
 end

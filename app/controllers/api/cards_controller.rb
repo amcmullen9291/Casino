@@ -2,8 +2,8 @@ class Api::CardsController < ApplicationController
     before_action :set_card, only: [ :show ]
 
     def index 
-        @cards = Card.all 
-        render json: @cards 
+        cards = Card.all 
+        render json: CardSerializer.new(cards) 
     end
 
     def new 
