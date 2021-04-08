@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     resources :guests
     resources :rounds 
     resources :cards
-    resources :dealers
   end
 
 end

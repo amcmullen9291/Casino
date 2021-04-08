@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_054522) do
+ActiveRecord::Schema.define(version: 2021_04_07_050708) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -41,36 +41,25 @@ ActiveRecord::Schema.define(version: 2021_04_07_054522) do
   end
 
   create_table "cards", force: :cascade do |t|
+    t.integer "card_number"
     t.string "suit"
     t.integer "value"
-    t.integer "card_number"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "dealers", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "guests", force: :cascade do |t|
-    t.string "name"
     t.integer "balance"
+    t.integer "won_games"
+    t.integer "lost_games"
+    t.integer "total_played"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "gamesPlayed"
   end
 
   create_table "rounds", force: :cascade do |t|
-    t.integer "guest_bet"
-    t.integer "previousCard_value"
-    t.integer "currentCard_value"
-    t.integer "usedCards"
-    t.integer "availableCards"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "outcome"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

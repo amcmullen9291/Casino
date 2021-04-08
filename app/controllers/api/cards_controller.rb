@@ -1,5 +1,11 @@
 class Api::CardsController < ApplicationController
     before_action :set_card, only: [ :show ]
+
+    def index 
+        @cards = Card.all 
+        render json: @cards 
+    end
+
     def new 
         @card = Card.new
     end
