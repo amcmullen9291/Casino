@@ -14,8 +14,8 @@ class Api::DealersController < ApplicationController
   end
 
   def index 
-    @dealer = Dealer.all
-    render json: @dealer
+    @dealers = Dealer.all
+    render json: @dealers
   end 
 
 end

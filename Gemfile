@@ -17,6 +17,7 @@ gem 'puma', '~> 5.0'
 # gem 'bcrypt', '~> 3.1.7'
 
 # added gems
+gem 'fast_jsonapi', '~> 1.5'
 # gem 'active_model_serializer-matchers', '~> 0.1.0'
 
 # Use Active Storage variant
