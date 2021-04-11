@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_050708) do
+ActiveRecord::Schema.define(version: 2021_04_10_180049) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 2021_04_07_050708) do
   end
 
   create_table "guests", force: :cascade do |t|
-    t.string "name", default: "Guest"
-    t.float "balance", default: 300.0
+    t.string "name"
+    t.float "balance"
     t.integer "won_games", default: 0
     t.integer "lost_games", default: 0
     t.integer "total_played", default: 0
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_050708) do
   create_table "rounds", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "guest_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

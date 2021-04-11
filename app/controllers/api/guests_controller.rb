@@ -2,47 +2,39 @@ class Api::GuestsController < ApplicationController
     before_action :set_guest, only: [:show, :edit, :update ]
 
     def index 
-        guests = Guest.first 
+        guests = Guest.all 
         render json: GuestSerializer.new(guests) 
-        
-    end 
+    end
 
     def new 
         @guest = Guest.new
-        render json: @guest
+        render json: GuestSerializer.new(@guest)
     end
 
     def create 
-        @guest = Guest.new
-        if @guest.create(guest_params)
-            render json: @guest
-        else
-            render :new
-        end
+        Guest.create(guest_params)
+        render json: GuestSerializer.new(@guest)
     end 
 
     def edit 
     end 
 
     def update 
-        if @guest.update(guest_params)
-            render json: @guest
-        else
-            render :edit
-        end
+            guest.update(guest_params)
+            render json: guest
     end 
 
     def show 
-        render json: @guest
+        render json: guest
     end 
 
     private
 
-    def user_params 
-        params.require(:guest).permit(:name, :balance, :gamesPlayed)
+    def guest_params 
+        params.fetch(:guest, {}).permit(:name, :balance, :won_games, :lost_games, :total_played)
     end
 
     def set_guest 
-        @guest = Guest.find(params[:id])
+        guest = Guest.first
     end
 end
