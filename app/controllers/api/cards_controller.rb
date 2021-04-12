@@ -11,11 +11,10 @@ class Api::CardsController < ApplicationController
     end
 
     def create 
-        @card = Card.new
-        if @card.create(card_params)
+        @card = Card.new(params)
+        if @card.save
+            @card.image.attach(params[:image])
             render json: @card
-        else
-            render :new, notice: "Image did not load."
         end
     end
 
@@ -26,7 +25,7 @@ class Api::CardsController < ApplicationController
 
     private 
     def card_params 
-        params.require(:card).permit(:suit, :value, :card_number, :image)
+        params.require(:card).permit(:suit, :value, :card_number, :image_url)
     end
 
     def set_card 
