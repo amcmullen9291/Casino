@@ -26,7 +26,7 @@ class Api::CardsController < ApplicationController
 
     private 
     def card_params 
-        params.require(:card).permit(:suit, :value, :card_number)
+        params.require(:card).permit(:suit, :value, :card_number, :avatar)
     end
 
     def set_card 
