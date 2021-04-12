@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :cards
   end
 
-  post'/api/guests', to: 'guest#create'
+  post'/api/guests', to: 'guest#create' 
+  get 'api/api/public/cards/', to: 'card#show'
 end
