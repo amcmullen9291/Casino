@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2021_04_10_180049) do
 
   create_table "guests", force: :cascade do |t|
     t.string "name"
-    t.float "balance"
+    t.decimal "balance", precision: 8, scale: 2
     t.integer "won_games", default: 0
     t.integer "lost_games", default: 0
     t.integer "total_played", default: 0

@@ -63,4 +63,4 @@ Card.create!(:card_number => "50", :suit => "diamonds", :value => "10");
 Card.create!(:card_number => "51", :suit => "diamonds", :value => "10");
 Card.create!(:card_number => "52", :suit => "diamonds", :value => "10");
 
-Guest.create(:name => "Sylvester", :balance => 515.00)
+Guest.create(:name => "Guest", :balance => 542.50, :won_games => 0, lost_games: 0, :total_played => 0) 

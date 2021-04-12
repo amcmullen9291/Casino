@@ -12,8 +12,10 @@ class Api::GuestsController < ApplicationController
     end
 
     def create 
-        Guest.create(guest_params)
-        render json: GuestSerializer.new(@guest)
+        guests = Guest.all
+        guest = Guest.new(guest_params)
+        guest.save
+        render json: GuestSerializer.new(guests)
     end 
 
     def edit 
@@ -31,7 +33,7 @@ class Api::GuestsController < ApplicationController
     private
 
     def guest_params 
-        params.fetch(:guest, {}).permit(:name, :balance, :won_games, :lost_games, :total_played)
+        params.fetch(:guest).permit(:name, :balance, :won_games, :lost_games, :total_played)
     end
 
     def set_guest 
