@@ -15,7 +15,7 @@ class Api::CardsController < ApplicationController
         if @card.create(card_params)
             render json: @card
         else
-            render :new
+            render :new, notice: "Image did not load."
         end
     end
 
@@ -26,7 +26,7 @@ class Api::CardsController < ApplicationController
 
     private 
     def card_params 
-        params.require(:card).permit(:suit, :value, :card_number, :avatar)
+        params.require(:card).permit(:suit, :value, :card_number, :image)
     end
 
     def set_card 
