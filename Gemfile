@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.7'
 
 # added gems
 gem 'fast_jsonapi', '~> 1.5'
+gem 'paperclip', '~> 5.0.0'
 # gem 'active_model_serializer-matchers', '~> 0.1.0'
 
 # Use Active Storage variant
