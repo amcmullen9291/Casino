@@ -7,19 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Card.create!(:card_number => "1", :suit => "spades" , :value => "1", :image_url => "public/cards/spades/AS.jpg");
-Card.create!(:card_number => "2", :suit => "spades" , :value => "2", :image_url => "public/cards/spades/2S.jpg");
-Card.create!(:card_number => "3", :suit => "spades" , :value => "3", :image_url => "public/cards/spades/3S.jpg");
-Card.create!(:card_number => "4", :suit => "spades" , :value => "4", :image_url => "public/cards/spades/4S.jpg");
-Card.create!(:card_number => "5", :suit => "spades" , :value => "5", :image_url => "public/cards/spades/5S.jpg");
-Card.create!(:card_number => "6", :suit => "spades" , :value => "6", :image_url => "public/cards/spades/6S.jpg");
-Card.create!(:card_number => "7", :suit => "spades" , :value => "7", :image_url => "public/cards/spades/7S.jpg");
-Card.create!(:card_number => "8", :suit => "spades" , :value => "8", :image_url => "public/cards/spades/8S.jpg");
-Card.create!(:card_number => "9", :suit => "spades" , :value => "9", :image_url => "public/cards/spades/9S.jpg");
-Card.create!(:card_number => "10", :suit => "spades" , :value => "10", :image_url => "public/cards/spades/10S.jpg");
-Card.create!(:card_number => "11", :suit => "spades" , :value => "10", :image_url => "public/cards/spades/JS.jpg");
-Card.create!(:card_number => "12", :suit => "spades" , :value => "10", :image_url => "public/cards/spades/QS.jpg");
-Card.create!(:card_number => "13", :suit => "spades" , :value => "10", :image_url => "public/cards/spades/KS.jpg");
+Card.create!(:card_number => "1", :suit => "spades" , :value => "1", :avatar => "public/cards/spades/AS.jpg");
+Card.create!(:card_number => "2", :suit => "spades" , :value => "2", :avatar => "public/cards/spades/2S.jpg");
+Card.create!(:card_number => "3", :suit => "spades" , :value => "3", :avatar => "public/cards/spades/3S.jpg");
+Card.create!(:card_number => "4", :suit => "spades" , :value => "4", :avatar => "public/cards/spades/4S.jpg");
+Card.create!(:card_number => "5", :suit => "spades" , :value => "5", :avatar => "public/cards/spades/5S.jpg");
+Card.create!(:card_number => "6", :suit => "spades" , :value => "6", :avatar => "public/cards/spades/6S.jpg");
+Card.create!(:card_number => "7", :suit => "spades" , :value => "7", :avatar => "public/cards/spades/7S.jpg");
+Card.create!(:card_number => "8", :suit => "spades" , :value => "8", :avatar => "public/cards/spades/8S.jpg");
+Card.create!(:card_number => "9", :suit => "spades" , :value => "9", :avatar => "public/cards/spades/9S.jpg");
+Card.create!(:card_number => "10", :suit => "spades" , :value => "10", :avatar => "public/cards/spades/10S.jpg");
+Card.create!(:card_number => "11", :suit => "spades" , :value => "10", :avatar => "public/cards/spades/JS.jpg");
+Card.create!(:card_number => "12", :suit => "spades" , :value => "10", :avatar => "public/cards/spades/QS.jpg");
+Card.create!(:card_number => "13", :suit => "spades" , :value => "10", :avatar => "public/cards/spades/KS.jpg");
 
 Card.create!(:card_number => "27", :suit => "hearts", :value => "1", :image_url => "public/cards/hearts/AH.jpg");
 Card.create!(:card_number => "28", :suit => "hearts", :value => "2", :image_url => "public/cards/hearts/2H.jpg");
