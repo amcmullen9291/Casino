@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
 
   post'/api/guests', to: 'guest#create' 
-  get 'api/api/public/cards/', to: 'card#show'
+  get 'api/public/cards/', to: 'card#show'
 end

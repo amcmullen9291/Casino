@@ -13,8 +13,10 @@ class Api::CardsController < ApplicationController
     def create 
         @card = Card.new(params)
         if @card.save
-            @card.image.attach(params[:image])
-            render json: @card
+            @card.avatar.attach(params[:avatar])
+            render json: CardSerializer.new(@card)
+        else
+            render 
         end
     end
 
@@ -25,7 +27,7 @@ class Api::CardsController < ApplicationController
 
     private 
     def card_params 
-        params.require(:card).permit(:suit, :value, :card_number, :image_url)
+        params.require(:card).permit(:suit, :value, :card_number, :image_url, :avatar)
     end
 
     def set_card 
