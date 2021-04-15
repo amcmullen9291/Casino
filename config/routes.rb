@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :guests
     resources :rounds 
     resources :cards, only: %i[create index]
+    end
   end
  
   post'/api/guests', to: 'guest#create' 
