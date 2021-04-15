@@ -7,9 +7,10 @@ Rules:
 * A bid of "0.00" is not allowed; 
 * The deck is automatically reset; 
 * User balances are saved;
-* If a player reaches a balance of $0.00 the game is reset.
+* If balance reaches $0.00 the game is reset.
 * The Background can be muted by clicking on the Rolltide Logo
 
 enjoy!
 
 background music is "Rosa Parks" by Outkast.
+Rails server runs on http://[::1]:3000/
