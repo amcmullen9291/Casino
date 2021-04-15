@@ -7,19 +7,22 @@ class Round < ApplicationRecord
 
     def draw
         usedCards << @cards.shuffle!.pop
-        if usedCard[-1] > usedCards[-2]
+        if usedCards[-1] > usedCards[-2]
             return "higher"
-        else
+        elsif usedCards[-1] < usedCards[-2]
             return "lower"
+        else
+            return "equal"
         end
-        return @cards.length 
+        return @cards.length
+        if userCards.length = 52
+            restartPlay 
+        end
     end
 
-    def compared 
-        if usedCard[last_element-1] > usedCards[last_element]
-            return "lower"
-        else
-            return "higher"
-        end
+    def restartPlay
+        usedCards = []
     end 
+    # needs a shuffle function to break up the flow between rounds
+
 end

@@ -1,4 +1,9 @@
 class CardSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :card_number, :suit, :value, :image_url, :avatar
+  include Rails.application.routes.url_helpers
+  attributes :card_number, :suit, :value, :image_url
+
+  # def avatar
+  #   rails_blob_path(card.avatar, only_path: true) if card.avatar.attached?
+  # end
 end
