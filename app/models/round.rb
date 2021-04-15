@@ -22,4 +22,9 @@ class Round < ApplicationRecord
             return "higher"
         end
     end 
+
+    def restartPlay
+        usedCards = []
+    end 
+
 end
