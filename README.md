@@ -1,7 +1,7 @@
 Fashioned after the classic "Higher-Lower" card game. 
 Rules: 
 
-* User starts with a 300.00 balanace.
+* User starts with a 542.50 balanace.
 * Bids are adjusted in increments of $5.00;
 * A 'tie' will count as a winning round;
 * A bid of "0.00" is not allowed; 
