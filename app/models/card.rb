@@ -17,15 +17,16 @@ class Card < ApplicationRecord
             else
                 return "equal"
             end
+
             return @usedcards.length
-            if @userCards.length = 52
+            if @userCards.length == 52
                 restartPlay 
             end
         end
     end
 
     def restartPlay
-        @@usedCards = []
+        @usedCards = []
     end 
 
 end

@@ -63,4 +63,4 @@ Card.create!(:card_number => "50", :suit => "diamonds", :value => "10", :image_u
 Card.create!(:card_number => "51", :suit => "diamonds", :value => "10", :image_url => "http://[::1]:3000/cards/diamonds/QD.jpg");
 Card.create!(:card_number => "52", :suit => "diamonds", :value => "10", :image_url => "http://[::1]:3000/cards/diamonds/KD.jpg");
 
-Guest.create(:name => "Guest", :balance => 542.50, :won_games => 0, lost_games: 0, :total_played => 0) 
+Guest.create(:name => "Guest", :balance => 542.00, :won_games => 0, lost_games: 0, :total_played => 0) 
