@@ -7,8 +7,8 @@ class Api::GuestsController < ApplicationController
     end
 
     def new 
-        @guest = Guest.new
-        render json: GuestSerializer.new(@guest)
+        guest = Guest.new
+        render json: GuestSerializer.new(guest)
     end
 
     def create 
@@ -22,12 +22,14 @@ class Api::GuestsController < ApplicationController
     end 
 
     def update 
-            guest.update(guest_params)
-            render json: guest
+            @guest.update(guest_params)
+            @guest.save
+            render json: GuestSerializer.new(@guest)
     end 
 
     def show 
-        render json: guest
+        guests = Guest.all
+        render json: GuestSerializer.new(guests)
     end 
 
     private
@@ -37,6 +39,6 @@ class Api::GuestsController < ApplicationController
     end
 
     def set_guest 
-        guest = Guest.first
+        @guest = Guest.first
     end
 end
