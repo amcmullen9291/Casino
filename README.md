@@ -3,10 +3,10 @@ Rules:
 
 * User starts with a balanace of $542.50 
 * Bids are adjusted in increments of $5.00;
-* A 'tie' will count as a winning round;
+* A 'tie' will count as a result of "lower";
 * A bid of "0.00" is not allowed; 
 * The deck is automatically reset; 
-* User balances are saved;
+* Guest balances are saved;
 * If balance reaches $0.00 the game is reset.
 * The Background music can be controlled  by clicking on the Rolltide Logo
 
